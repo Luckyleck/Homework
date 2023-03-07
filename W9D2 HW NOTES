@@ -1,0 +1,7 @@
+The root node of this tree is the document object, upon which you've called methods like 
+document.getElementById() and document.createElement().
+
+Every object in the DOM tree is a Node
+
+Some Nodes aren't HTML elements, such as the plain text you might put inside a p or span (Text),
+<!-- comments --> (Comment), and document (Document).
