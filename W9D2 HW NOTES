@@ -5,3 +5,38 @@ Every object in the DOM tree is a Node
 
 Some Nodes aren't HTML elements, such as the plain text you might put inside a p or span (Text),
 <!-- comments --> (Comment), and document (Document).
+
+
+each Node contains properties like childNodes
+points to an array-like list of the node's children and parent node
+
+someNode.contains(otherNode), which checks if otherNode is a descendent of someNode,
+and someNode.appendChild(childNode)
+
+Every element is an instance of Element, which inherits from Node, and most elements are 
+instances of HTMLElement, which inherits from Element (the primary exception being SVGElement,
+which is used for graphics).
+
+Get and set common attributes with properties like
+Element.id, Element.className, and HTMLElement.tabIndex.
+
+Get and set any attributes with
+Element.getAttribute(attrName) and Element.setAttribute(attrName, value).
+
+Want to get or set the text content of, say, a span or a p?
+HTMLElement.innerText
+
+Want to know about an element's position on the page?
+Element.getBoundingClientRect()
+
+Add, remove, and toggle classes using methods from the DOMTokenList object returned by
+Element.classList
+
+Read and write data attributes using the DOMStringMap object returned by
+HTMLOrForeignElement.dataset.
+
+	        NodeList	                HTMLCollection
+live	Node.childNodes	document.getElementsByClassName()
+                      document.getElementsByTagName()
+                       Element.children
+static	document.querySelectorAll()	
